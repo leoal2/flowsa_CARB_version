@@ -1,0 +1,64 @@
+# data location: https://ww2.arb.ca.gov/sites/default/files/2024-09/nc-ghg_inventory_sector_all_00-22.xlsx
+# direct url: https://ww2.arb.ca.gov/sites/default/files/2024-09/nc-ghg_inventory_sector_all_00-22.xlsx
+
+author: California Air Resources Board (CARB)
+source_name: California Greenhouse Gas Inventory
+bib_id: StateGHGI_CA
+format: xlsx  # Excel file
+
+url:
+  base_url: https://ww2.arb.ca.gov/sites/default/files/2024-09/nc-ghg_inventory_sector_all_00-22.xlsx
+
+call_response_fxn: !script_function:StateGHGI CA_call
+parse_response_fxn: !script_function:StateGHGI CA_customized_parse
+
+filename: nc-ghg_inventory_sector_all_00-22.xlsx
+  #GWP:AR4-100
+data_format: Excel
+
+years:
+- 2022
+- 2021
+- 2020
+- 2019
+- 2018
+- 2017
+- 2016
+- 2015
+- 2014
+- 2013
+- 2012
+
+sheet_name: Included emissions
+
+columns:
+  - Type of emission
+  - IPCC Code
+  - Sector Level 1
+  - Sector Level 2
+  - Sector Level 3
+  - Sector Level 4
+  - Activity Level 1
+  - Activity Level 2
+  - GHG
+  - GWP
+  - 2022
+  - 2021
+  - 2020
+  - 2019
+  - 2018
+  - 2017
+  - 2016
+  - 2015
+  - 2014
+  - 2013
+  - 2012
+
+# EPA Table References for FLOWSA Standardization
+epa_table_references:
+  EPA_GHGI_T_4_100: Fuel Combustion (Buildings, Industry, Agriculture)
+  EPA_GHGI_T_4_200: Transportation Emissions
+
+
+
+

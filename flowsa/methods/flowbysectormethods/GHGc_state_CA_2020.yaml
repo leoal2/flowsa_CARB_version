@@ -1,0 +1,31 @@
+# Method for state GHG emissions sourced from the California inventory
+!include:USEEIO_summary_target.yaml
+year: &ghg_year 2020
+geoscale: state
+
+sources_to_cache:
+  Detail_Use_2020:
+    !include:Detail_Use_SUT.yaml
+    year: *ghg_year
+    source_names:
+      BEA_Summary_Use_SUT:
+        !include:Detail_Use_SUT.yaml:source_names:BEA_Summary_Use_SUT
+        year: *ghg_year
+
+
+
+source_names:
+  # U.S. national GHG emissions by state
+  GHG_state_2020_m1:
+    year: *ghg_year
+    data_format: FBS
+    exclusion_fields:
+        Location:
+          - '06000'  # CA
+
+  # State Inventory Tool GHG emissions by state - not used for CA
+
+  # California GHG emissions data
+  StateGHGI_CA: 
+    !include:GHG_state_supplemental_2020.yaml:source_names:StateGHGI_CA
+
