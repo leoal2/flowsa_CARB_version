@@ -6,8 +6,11 @@ source_name: California Greenhouse Gas Inventory
 bib_id: StateGHGI_CA
 format: xlsx  # Excel file
 
+#url:
+#  base_url: https://ww2.arb.ca.gov/sites/default/files/2024-09/nc-ghg_inventory_sector_all_00-22.xlsx
+
 url:
-  base_url: https://ww2.arb.ca.gov/sites/default/files/2024-09/nc-ghg_inventory_sector_all_00-22.xlsx
+  base_url: https://raw.githubusercontent.com/leoal2/flowsa_CARB_version/main/flowsa/data/nc-ghg_inventory_sector_all_00-22.xlsx
 
 call_response_fxn: !script_function:StateGHGI CA_call
 parse_response_fxn: !script_function:StateGHGI CA_customized_parse
