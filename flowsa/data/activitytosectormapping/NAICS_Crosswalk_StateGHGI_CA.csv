@@ -687,7 +687,7 @@ StateGHGI_CA,"Industrial, Manufacturing, Not Specified, None, Fuel combustion, R
 StateGHGI_CA,"Industrial, Manufacturing, Not Specified, None, Fuel combustion, Residual fuel oil",NAICS_2017_Code,31,,industrial_petroleum,,"CO2FFC, Industrial, Petroleum",
 StateGHGI_CA,"Industrial, Manufacturing, Not Specified, None, Fuel storage, Coal",NAICS_2017_Code,31,,industrial_coal,,NO CLEAR MAPPING,
 StateGHGI_CA,"Industrial, Manufacturing, Plastics & Rubber, Fugitives, Fugitive emissions, NA",NAICS_2017_Code,326,,industrial_other,,NO CLEAR MAPPING,
-StateGHGI_CA,"Industrial, Manufacturing, Plastics & Rubber, None, Fuel combustion, Natural gas",NAICS_2017_Code,,,industrial_gas,,"CO2FFC, Industrial, Natural Gas",
+StateGHGI_CA,"Industrial, Manufacturing, Plastics & Rubber, None, Fuel combustion, Natural gas",NAICS_2017_Code,326,,industrial_gas,,"CO2FFC, Industrial, Natural Gas",
 StateGHGI_CA,"Industrial, Manufacturing, Plastics & Rubber, Plastics, Fuel combustion, Natural gas",NAICS_2017_Code,326,,industrial_gas,,"CO2FFC, Industrial, Natural Gas",
 StateGHGI_CA,"Industrial, Manufacturing, Primary Metals, Fugitives, Fugitive emissions, NA",NAICS_2017_Code,331,,industrial_other,,NO CLEAR MAPPING,
 StateGHGI_CA,"Industrial, Manufacturing, Primary Metals, Lead Smelting, Process emissions, NA",NAICS_2017_Code,331,,industrial_other,,NO CLEAR MAPPING,
