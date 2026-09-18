@@ -50,11 +50,17 @@ def CA_customized_parse(df_list, source, year, config, **_):
     df = df[df['Sector Level 1'] != 'Electricity Generation (Imports)']
 
     # Concatenate sector and activity levels into one field
-    df['ActivityProducedBy'] = df[[
-        'Sector Level 1', 'Sector Level 2', 
-        'Sector Level 3', 'Sector Level 4', 
-        'Activity Level 1', 'Activity Level 2'
-    ]].fillna('').agg(', '.join, axis=1).str.strip(', ')
+    df['ActivityProducedBy'] = (
+        df[[
+            'Sector Level 1', 'Sector Level 2',
+            'Sector Level 3', 'Sector Level 4',
+            'Activity Level 1', 'Activity Level 2'
+        ]]
+        .replace(r'^\s*$', 'NA', regex=True)
+        .fillna('NA')
+        .agg(', '.join, axis=1)
+        .str.strip(', ')
+    )
 
     # Rename and clean FlowAmount
     df = df.rename(columns={'GHG': 'FlowName', str(year): 'FlowAmount'})
