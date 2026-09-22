@@ -1,0 +1,11 @@
+author: CARB 2009 Refrigerant Management Program ISOR / CA building-materials EEIO detail pipeline
+source_name: CARB RMP ISOR Appendix B commercial refrigerant attribution weights
+source_url: https://ww3.arb.ca.gov/regact/2009/gwprmp09/gwprmp09.htm
+bib_id: CARB_RMP_Refrigerant
+api_name: None
+api_key_required: false
+format: csv
+url: None
+parse_response_fxn: !script_function:CARB_RMP_Refrigerant carb_rmp_refrigerant_parse
+years:
+- 2022

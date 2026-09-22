@@ -1,0 +1,11 @@
+author: California Energy Commission / CA building-materials EEIO detail pipeline
+source_name: CEUS 2022 Appendix K commercial fuel-combustion attribution weights
+source_url: https://www.energy.ca.gov/data-reports/surveys/commercial-end-use-survey
+bib_id: CARB_CEUS_Combustion
+api_name: None
+api_key_required: false
+format: csv
+url: None
+parse_response_fxn: !script_function:CARB_CEUS_Combustion carb_ceus_combustion_parse
+years:
+- 2022

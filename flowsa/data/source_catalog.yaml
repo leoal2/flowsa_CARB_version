@@ -102,6 +102,18 @@ BLS_QCEW:
 BTS_Airlines:
   data_format: FBA
   activity_schema: None
+CARB_CEUS_Combustion:
+  data_format: FBA
+  class:
+    - Other
+  activity_schema: NAICS_2017_Code
+  sector_hierarchy: "parent-completeChild"
+CARB_RMP_Refrigerant:
+  data_format: FBA
+  class:
+    - Other
+  activity_schema: NAICS_2017_Code
+  sector_hierarchy: "parent-completeChild"
 BTS_TSA:
   data_format: FBA
   activity_schema: None
