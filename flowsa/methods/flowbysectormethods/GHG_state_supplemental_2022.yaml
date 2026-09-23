@@ -292,30 +292,55 @@ source_names:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv ag
         attribution_method: direct
 
+      # commercial_coal/petroleum/wood: the "Commercial, Not Specified" fuel
+      # rows previously mapped wholesale to NAICS 531 (Real Estate) - tenant
+      # industries operate the HVAC/combustion equipment, not their
+      # landlord. Now split across the actual tenant NAICS by CEUS 2022
+      # Appendix K fuel-usage-by-building-activity weights (proportional
+      # attribution); already-NAICS-specific rows in these same activity
+      # sets (e.g. the CHP: Commercial rows) map 1:1 already and pass
+      # through unaffected. See CARB_CEUS_Combustion.py.
       commercial_coal:
         selection_fields:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv commercial_coal
-        attribution_method: direct
+        attribution_method: proportional
+        attribution_source:
+          CARB_CEUS_Combustion:
+            geoscale: state
 
       commercial_gas:
         selection_fields:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv commercial_gas
         attribution_method: direct
 
+      # commercial_other: the ODS-substitute (HFC refrigerant leakage) rows
+      # previously mapped wholesale to NAICS 531 - split across the actual
+      # tenant NAICS that operate the refrigeration/AC equipment, by CARB's
+      # own 2009 RMP ISOR Appendix B analysis (equipment count x charge size
+      # x leak rate x GWP mix, by NAICS). See CARB_RMP_Refrigerant.py.
       commercial_other:
         selection_fields:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv commercial_other
-        attribution_method: direct
+        attribution_method: proportional
+        attribution_source:
+          CARB_RMP_Refrigerant:
+            geoscale: state
 
       commercial_petroleum:
         selection_fields:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv commercial_petroleum
-        attribution_method: direct
+        attribution_method: proportional
+        attribution_source:
+          CARB_CEUS_Combustion:
+            geoscale: state
 
       commercial_wood:
         selection_fields:
           PrimaryActivity: !from_index:StateGHGI_CA_asets.csv commercial_wood
-        attribution_method: direct
+        attribution_method: proportional
+        attribution_source:
+          CARB_CEUS_Combustion:
+            geoscale: state
 
       direct:
         selection_fields:
